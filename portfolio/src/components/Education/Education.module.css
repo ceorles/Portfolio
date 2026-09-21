@@ -1,0 +1,141 @@
+.education {
+  margin-top: 64px;
+}
+
+.heading {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.group {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.groupTitle {
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 18px;
+}
+
+.timeline {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+  padding-left: 18px;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* Connecting line between consecutive entries in the same group. */
+.item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 19px;
+  bottom: -22px;
+  width: 1px;
+  background: var(--color-border-strong);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.years {
+  font-size: 0.82rem;
+  color: var(--color-text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  padding: 1px 9px;
+}
+
+.badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--color-accent-soft);
+  background: var(--color-accent-tint);
+  border-radius: 999px;
+  padding: 1px 9px;
+}
+
+.school {
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.address,
+.addressLink {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-top: 6px;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.addressLink {
+  color: var(--color-accent-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-line);
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--transition);
+}
+
+.addressLink:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+.addressLink svg {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+@media (max-width: 640px) {
+  .education {
+    margin-top: 44px;
+  }
+
+  .group {
+    padding: 18px;
+  }
+}

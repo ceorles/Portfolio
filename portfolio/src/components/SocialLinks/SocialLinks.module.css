@@ -1,0 +1,67 @@
+.compact {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  transition: color var(--transition), border-color var(--transition),
+    transform var(--transition);
+}
+
+.iconLink:hover {
+  color: var(--color-accent-soft);
+  border-color: var(--color-accent-line);
+  transform: translateY(-2px);
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-accent-soft);
+  transition: border-color var(--transition), background-color var(--transition),
+    transform var(--transition);
+}
+
+.card:hover {
+  border-color: var(--color-accent-line);
+  background: var(--color-surface-hover);
+  transform: translateY(-2px);
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.cardName {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.cardHandle {
+  color: var(--color-text-faint);
+  font-size: 0.85rem;
+}
