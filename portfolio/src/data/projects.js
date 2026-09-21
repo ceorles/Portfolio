@@ -35,7 +35,7 @@ export const projects = [
     title: 'Pokedex',
     description:
       'A Pokemon browser that fetches creature data and renders searchable, detailed cards.',
-    tags: ['JavaScript', 'API'],
+    tags: ['HTML', 'CSS'],
     image: pokemonImage,
     url: 'https://ceorles.github.io/responsive_website.github.io/',
   },
